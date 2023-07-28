@@ -23,21 +23,23 @@
                 tooltip="Go to the Portfolio Overview"
             />
 
-             <tnt:NavigationListItem
+            <tnt:NavigationListItem
                 text="Skills &amp; Tools"
                 icon="sap-icon://developer-settings"
                 select="onNavToSkills"
                 tooltip="Go to the Skills Overview"
             />
 
-
-            	
-
+            <tnt:NavigationListItem
+                text="Videos"
+                icon="sap-icon://media-play"
+                select="onNavToVideos"
+                tooltip="Go to my Videos"
+            />
         </tnt:NavigationList>
         <tnt:fixedItem>
             <tnt:NavigationList>
-             
-              <tnt:NavigationListItem
+                <tnt:NavigationListItem
                     text="Email"
                     select="onOpenEmail"
                     icon="sap-icon://email"

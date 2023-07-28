@@ -1,17 +1,3 @@
-// import Controller from "sap/ui/core/mvc/Controller";
-
-// /**
-//  * @namespace myportfolio.portfolio.controller
-//  */
-// export default class Main extends Controller {
-
-//     /*eslint-disable @typescript-eslint/no-empty-function*/
-//     public onInit(): void {
-
-//     }
-// }
-
-
 
 sap.ui.define(
     [
@@ -22,29 +8,24 @@ sap.ui.define(
         "sap/ui/model/Filter",
         "sap/ui/model/FilterOperator",
         "sap/ui/model/FilterType",
-        "sap/base/Log",
         "sap/ui/core/UIComponent",
         "sap/ui/model/json/JSONModel",
         "sap/m/MessageToast",
         'sap/m/MessageBox',
     ],
-    function (BaseController, library, Fragment, formatter, Filter, FilterOperator, FilterType, Log, UIComponent, JSONModel, MessageToast, MessageBox) {
+    function (BaseController, library, Fragment, formatter, Filter, FilterOperator, FilterType, UIComponent, JSONModel, MessageToast, MessageBox) {
         "use strict";
 
         return BaseController.extend("myportfolio.portfolio.controller.Skills", {
             formatter: formatter,
 
             onInit() {
-
-
-
-
                 var oLayout1 = this.getView().byId("saptools");
                 var oTemplate1 = oLayout1.getBindingInfo("content").template;
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/saptools',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('tool', false)
+                    sorter: new sap.ui.model.Sorter('pressed', false)
                 });
 
                 var oLayout1 = this.getView().byId("skills");
@@ -52,7 +33,7 @@ sap.ui.define(
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/skills',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('skill', false)
+                    sorter: new sap.ui.model.Sorter('pressed', false)
                 });
 
                 var oLayout1 = this.getView().byId("tools");
@@ -60,7 +41,7 @@ sap.ui.define(
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/tools',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('tool', false)
+                    sorter: new sap.ui.model.Sorter('pressed', false)
                 });
 
                 var oLayout1 = this.getView().byId("qualifications");
@@ -68,7 +49,7 @@ sap.ui.define(
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/qualifications',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('qualification', false)
+                    sorter: new sap.ui.model.Sorter('pressed', false)
                 });
 
 
@@ -124,6 +105,9 @@ sap.ui.define(
                         {
                             "skill": "Spanish [beginner]"
                         },
+                        {
+                            "skill": "SCRUM"
+                        }
                     ],
                     tools: [
 

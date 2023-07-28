@@ -10,35 +10,37 @@
         homeIconPressed="onHomeIconPressed"
     >
         <additionalContent>
-          
-
-               <m:Button
-            text="Open Resume"
+            <m:Button
+                text="Open Resume"
                 press="onOpenResume"
-                icon="sap-icon://chain-link"
+                icon="sap-icon://attachment" 
                 tooltip="Click here to download &amp; view my Resume"
             />
 
-            	<m:MenuButton text="GitHub" >
-			<m:menu>
-				<m:Menu>
-					<m:MenuItem text="Personal"  press="onPersonalGithub" />
-					<m:MenuItem text="Professional"  press="onProfessionalGithub" />
-				</m:Menu>
-			</m:menu>
-		</m:MenuButton>
+            <m:MenuButton text="GitHub" icon="sap-icon://command-line-interfaces">
+                <m:menu>
+                    <m:Menu>
+                        <m:MenuItem
+                            text="Personal"
+                            press="onPersonalGithub"
+                        />
+                        <m:MenuItem
+                            text="Professional"
+                            press="onProfessionalGithub"
+                        />
+                    </m:Menu>
+                </m:menu>
+            </m:MenuButton>
 
-
-      
-             <m:Avatar  press="onOpenLinkedin" src="./images/linkedin.jpeg" displaySize="XS" displayShape="Square"
-                
+            <m:Avatar
+                press="onOpenLinkedin"
+                src="./images/linkedin.jpeg"
+                displaySize="XS"
+                displayShape="Square"
             />
-<!-- 
+            <!-- 
              <m:Avatar  press="onOpenGitHub" src="./images/github.jpeg" displaySize="XS" displayShape="Square"
             /> -->
-
-            
-            
         </additionalContent>
         <!-- <profile>
             <m:Avatar src="./images/linkedin.jpeg"

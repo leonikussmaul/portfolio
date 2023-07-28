@@ -91,6 +91,13 @@
                     "target": [
                         "Skills"
                     ]
+                },
+                {
+                    "name": "Videos",
+                    "pattern": "Videos",
+                    "target": [
+                        "Videos"
+                    ]
                 }
             ],
             "targets": {
@@ -107,6 +114,13 @@
                     "clearControlAggregation": false,
                     "viewId": "Skills",
                     "viewName": "Skills"
+                },
+                "Videos": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Videos",
+                    "viewName": "Videos"
                 }
             }
         },

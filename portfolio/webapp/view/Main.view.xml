@@ -8,15 +8,12 @@
     xmlns:f="sap.f"
     xmlns:l="sap.ui.layout"
     xmlns:core="sap.ui.core"
-    xmlns:smartTable="sap.ui.comp.smarttable"
     xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
     xmlns:layout="sap.ui.layout"
-    xmlns:ui-integration="sap.ui.integration.widgets"
-    xmlns:w="sap.ui.integration.widgets"
     xmlns:card="sap.f.cards"
     xmlns:smartchart="sap.ui.comp.smartchart"
     xmlns:cssgrid="sap.ui.layout.cssgrid"
-    	xmlns:cards="sap.f.cards"
+    xmlns:cards="sap.f.cards"
 >
     <f:DynamicPage
         id="page"
@@ -36,13 +33,15 @@
         <f:header />
 
         <f:content>
-
- <HBox width="100%">
- 
-			<Panel headerText="UI Development" height="auto" width="auto">
-				<layoutData>
-					<FlexItemData baseSize="50%"  />
-				</layoutData>
+            <HBox width="100%">
+                <Panel
+                    headerText="UI Development"
+                    height="auto"
+                    width="auto"
+                >
+                    <layoutData>
+                        <FlexItemData baseSize="50%" />
+                    </layoutData>
                     <f:GridContainer>
                         <f:layout>
                             <f:GridContainerSettings
@@ -51,72 +50,82 @@
                             />
                         </f:layout>
 
-
-                        <Carousel 
-			height="auto" width="650px"
-			pages="{
+                        <Carousel
+                            height="auto"
+                            width="650px"
+                            pages="{
 				path: 'portfolioModel>/UI'
-			}">
-			<customLayout>
-				<CarouselLayout  />
-			</customLayout>
-			<ScrollContainer 
-				vertical="false" 
-				horizontal="false" 
-				class="sapUiContentPadding">
+			}"
+                        >
+                            <customLayout>
+                                <CarouselLayout />
+                            </customLayout>
+                            <ScrollContainer
+                                vertical="false"
+                                horizontal="false"
+                                class="sapUiContentPadding"
+                            >
+                                <f:Card
+                                    height="620px"
+                                    width="620px"
+                                >
+                                    <f:header>
+                                        <cards:Header
+                                            title="{portfolioModel>name}"
+                                            subtitle="{portfolioModel>subTitle}"
+                                            iconSrc="{portfolioModel>icon}"
+                                            iconDisplayShape="Square"
+                                        />
+                                    </f:header>
+                                    <f:content>
+                                        <l:VerticalLayout
+                                            class="sapUiContentPadding"
+                                            width="100%"
+                                        >
+                                            <l:BlockLayout>
+                                                <l:BlockLayoutRow>
+                                                    <l:BlockLayoutCell
+                                                        width="1"
+                                                    >
+                                                        <FormattedText
+                                                            class="sapUiResponsiveMargin sapUiNoMarginTop"
+                                                            htmlText="{portfolioModel>description}"
+                                                        />
 
-				<f:Card height="620px" width="620px" >
-					<f:header>
-						<cards:Header
-							title="{portfolioModel>name}" 
-							subtitle="{portfolioModel>subTitle}" 
-							iconSrc="{portfolioModel>icon}"
-							iconDisplayShape="Square" />
-                           
-					</f:header>
-					<f:content>
-
-                    
-						<l:VerticalLayout class="sapUiContentPadding" width="100%" >
-							<l:BlockLayout>
-								<l:BlockLayoutRow>
-									<l:BlockLayoutCell width="1">
-										 <FormattedText
-                                        class="sapUiResponsiveMargin sapUiNoMarginTop"
-                                        htmlText="{portfolioModel>description}"
-                                    />
-
-                                    <HBox  justifyContent="Center" class="sapUiResponsiveMargin"
-				alignItems="Center">
-            	<Image src="{portfolioModel>image}" press="onOpenDemo" width="100%" alt="Screenshot #1 of Demand Genius UI" />
-             
-</HBox>
-                                  <FormattedText
-  class="sapUiResponsiveMargin"
-  htmlText= "{portfolioModel>details}" />
-
-									</l:BlockLayoutCell>
-
-								</l:BlockLayoutRow>
-							</l:BlockLayout>
-						</l:VerticalLayout>
-					</f:content>
-				</f:Card>
-			</ScrollContainer>
-		</Carousel>
-
-
+                                                        <HBox
+                                                            justifyContent="Center"
+                                                            class="sapUiResponsiveMargin"
+                                                            alignItems="Center"
+                                                        >
+                                                            <Image
+                                                                src="{portfolioModel>image}"
+                                                                press="onOpenDemo"
+                                                                width="100%"
+                                                                alt="Screenshot #1 of Demand Genius UI"
+                                                            />
+                                                        </HBox>
+                                                        <FormattedText
+                                                            class="sapUiResponsiveMargin"
+                                                            htmlText="{portfolioModel>details}"
+                                                        />
+                                                    </l:BlockLayoutCell>
+                                                </l:BlockLayoutRow>
+                                            </l:BlockLayout>
+                                        </l:VerticalLayout>
+                                    </f:content>
+                                </f:Card>
+                            </ScrollContainer>
+                        </Carousel>
                     </f:GridContainer>
+                </Panel>
 
-                    	
-			</Panel >
-         
-			
-                   
-			<Panel headerText="UX Design" height="100%">
-				<layoutData>
-					<FlexItemData baseSize="50%" />
-				</layoutData>
+                <Panel
+                    headerText="UX Design"
+                    height="100%"
+                >
+                    <layoutData>
+                        <FlexItemData baseSize="50%" />
+                    </layoutData>
                     <f:GridContainer
                         id="group2"
                         columnsChange=".onColumnsChange"
@@ -128,68 +137,78 @@
                             />
                         </f:layout>
 
-
-                        	<Carousel
-			height="auto" width="650px"
-			pages="{
+                        <Carousel
+                            height="auto"
+                            width="650px"
+                            pages="{
 				path: 'portfolioModel>/UX'
-			}">
-			<customLayout>
-				<CarouselLayout visiblePagesCount="{settings>/pagesCount}" />
-			</customLayout>
-			<ScrollContainer 
-				vertical="false" 
-				horizontal="false" 
-				class="sapUiContentPadding">
+			}"
+                        >
+                            <customLayout>
+                                <CarouselLayout
+                                    visiblePagesCount="{settings>/pagesCount}"
+                                />
+                            </customLayout>
+                            <ScrollContainer
+                                vertical="false"
+                                horizontal="false"
+                                class="sapUiContentPadding"
+                            >
+                                <f:Card
+                                    height="620px"
+                                    width="620px"
+                                >
+                                    <f:header>
+                                        <cards:Header
+                                            title="{portfolioModel>name}"
+                                            subtitle="{portfolioModel>subTitle}"
+                                            iconSrc="{portfolioModel>icon}"
+                                            iconDisplayShape="Square"
+                                        />
+                                    </f:header>
+                                    <f:content>
+                                        <l:VerticalLayout
+                                            class="sapUiContentPadding"
+                                            width="100%"
+                                        >
+                                            <l:BlockLayout>
+                                                <l:BlockLayoutRow>
+                                                    <l:BlockLayoutCell
+                                                        width="1"
+                                                    >
+                                                        <FormattedText
+                                                            class="sapUiResponsiveMargin sapUiNoMarginTop"
+                                                            htmlText="{portfolioModel>description}"
+                                                        />
 
-				<f:Card height="620px" width="620px" >
-					<f:header>
-						<cards:Header
-							title="{portfolioModel>name}" 
-							subtitle="{portfolioModel>subTitle}" 
-							iconSrc="{portfolioModel>icon}"
-							iconDisplayShape="Square" />
-                           
-					</f:header>
-					<f:content>
+                                                        <HBox
+                                                            justifyContent="Center"
+                                                            class="sapUiResponsiveMargin"
+                                                            alignItems="Center"
+                                                        >
+                                                            <Image
+                                                                src="{portfolioModel>image}"
+                                                                press="onOpenDemo"
+                                                                width="100%"
+                                                                alt="Screenshot #1 of Demand Genius UI"
+                                                            />
+                                                        </HBox>
 
-                    
-						<l:VerticalLayout class="sapUiContentPadding" width="100%" >
-							<l:BlockLayout>
-								<l:BlockLayoutRow>
-									<l:BlockLayoutCell width="1">
-										 <FormattedText
-                                        class="sapUiResponsiveMargin sapUiNoMarginTop"
-                                        htmlText="{portfolioModel>description}"
-                                    />
-
-                                       
-<HBox  justifyContent="Center" class="sapUiResponsiveMargin"
-				alignItems="Center">
-            	<Image src="{portfolioModel>image}" press="onOpenDemo" width="100%" alt="Screenshot #1 of Demand Genius UI" />
-         
-</HBox>
-
-                                  <FormattedText
-  class="sapUiResponsiveMargin"
-  htmlText= "{portfolioModel>details}" />
-
-       
-
-									</l:BlockLayoutCell>
-
-								</l:BlockLayoutRow>
-							</l:BlockLayout>
-						</l:VerticalLayout>
-					</f:content>
-				</f:Card>
-			</ScrollContainer>
-		</Carousel>
+                                                        <FormattedText
+                                                            class="sapUiResponsiveMargin"
+                                                            htmlText="{portfolioModel>details}"
+                                                        />
+                                                    </l:BlockLayoutCell>
+                                                </l:BlockLayoutRow>
+                                            </l:BlockLayout>
+                                        </l:VerticalLayout>
+                                    </f:content>
+                                </f:Card>
+                            </ScrollContainer>
+                        </Carousel>
                     </f:GridContainer>
-
-
                 </Panel>
-              </HBox>
+            </HBox>
         </f:content>
     </f:DynamicPage>
 </mvc:View>

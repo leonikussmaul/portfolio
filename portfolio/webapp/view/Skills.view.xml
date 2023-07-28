@@ -3,22 +3,15 @@
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"
-    xmlns:u="sap.uxap"
     xmlns:form="sap.ui.layout.form"
     xmlns:f="sap.f"
     xmlns:l="sap.ui.layout"
     xmlns:core="sap.ui.core"
-    	xmlns:grid="sap.ui.layout.cssgrid"
-    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:grid="sap.ui.layout.cssgrid"
     xmlns:customData="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-    xmlns:layout="sap.ui.layout"
-    xmlns:ui-integration="sap.ui.integration.widgets"
-    xmlns:w="sap.ui.integration.widgets"
-    xmlns:card="sap.f.cards"
     xmlns:cssgrid="sap.ui.layout.cssgrid"
-    	xmlns:cards="sap.f.cards"
+    xmlns:cards="sap.f.cards"
 >
-
     <f:DynamicPage
         id="page"
         title="{i18n>title}"
@@ -26,14 +19,24 @@
     >
         <f:title>
             <f:DynamicPageTitle>
-                <f:heading >
-                    <Title 
-                        text="Skills &amp; Tools"
+                <f:heading>
+                    <Title
+                        text="My Skills &amp; Tools"
                         id="headerTitle"
                     />
                 </f:heading>
+                	<f:expandedContent>
+                    <core:Icon src="sap-icon://rhombus-milestone-2" color="#0070f2"/>
+						<Label text="Key Skills" class="sapUiTinyMarginBegin"/>
+					</f:expandedContent>
+					<f:snappedContent>
+                     <core:Icon src="sap-icon://rhombus-milestone-2" color="#0070f2"/>
+						<Label text="Key Skills" class="sapUiTinyMarginBegin"/>
+					</f:snappedContent>
+					
             </f:DynamicPageTitle>
         </f:title>
+
         <f:header />
 
         <f:content>
@@ -42,17 +45,22 @@
                 width="100%"
                 vertical="false"
             > -->
+          
 
- <HBox width="100%" >
-
- <core:Icon class="sapUiTinyMarginTop" src="sap-icon://sap-ui5" ></core:Icon>
- <Panel headerText="SAP" height="100%" >
-
-				<layoutData>
-					<FlexItemData baseSize="29%" />
-				</layoutData>
+            <HBox width="100%">
+                <core:Icon
+                    class="sapUiTinyMarginTop"
+                    src="sap-icon://sap-ui5"
+                />
+                <Panel
+                    headerText="SAP"
+                    height="100%"
+                >
+                    <layoutData>
+                        <FlexItemData baseSize="29%" />
+                    </layoutData>
                     <f:GridContainer
-                        id="sapgroup" 
+                        id="sapgroup"
                         columnsChange=".onColumnsChange"
                     >
                         <f:layout>
@@ -62,40 +70,42 @@
                             />
                         </f:layout>
 
-                      
-                         <HBox class="sapUiSmallMarginTopBottom">
-                                        <l:HorizontalLayout
-                                            id="saptools"
-                                            allowWrapping="true"
-                                            content="{}"
-                                        >
-                                            <ToggleButton
-                                                text="{portfolioModel>tool}"
-                                                press="onPressToggle1"
-                                                class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
-                                               
-                                                 pressed="{portfolioModel>pressed}"
-                                            >
-                                                <customData>
-                                                    <core:CustomData
-                                                        key="tool"
-                                                        value="{portfolioModel>tool}"
-                                                        class="sapUiNoMarginTop sapUiNoMarginBottom"
-                                                    />
-                                                </customData>
-                                            </ToggleButton>
-                                        </l:HorizontalLayout>
-                                    </HBox>
+                        <HBox class="sapUiSmallMarginTopBottom">
+                            <l:HorizontalLayout
+                                id="saptools"
+                                allowWrapping="true"
+                                content="{}"
+                            >
+                                <ToggleButton
+                                    text="{portfolioModel>tool}"
+                                    press="onPressToggle1"
+                                    class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
+                                    pressed="{portfolioModel>pressed}"
+                                >
+                                    <customData>
+                                        <core:CustomData
+                                            key="tool"
+                                            value="{portfolioModel>tool}"
+                                            class="sapUiNoMarginTop sapUiNoMarginBottom"
+                                        />
+                                    </customData>
+                                </ToggleButton>
+                            </l:HorizontalLayout>
+                        </HBox>
                     </f:GridContainer>
-
-
                 </Panel>
 
- <core:Icon class="sapUiTinyMarginTop" src="sap-icon://education" ></core:Icon>
-			<Panel headerText="Skills" height="100%">
-				<layoutData>
-					<FlexItemData baseSize="16%" />
-				</layoutData>
+                <core:Icon
+                    class="sapUiTinyMarginTop"
+                    src="sap-icon://education"
+                />
+                <Panel
+                    headerText="Skills"
+                    height="100%"
+                >
+                    <layoutData>
+                        <FlexItemData baseSize="16%" />
+                    </layoutData>
                     <f:GridContainer>
                         <f:layout>
                             <f:GridContainerSettings
@@ -105,82 +115,76 @@
                         </f:layout>
 
                         <HBox class="sapUiSmallMarginTopBottom">
-                                        <l:HorizontalLayout
-                                            id="skills"
-                                            allowWrapping="true"
-                                            content="{}"
-                                        >
-                                            <ToggleButton
-                                                text="{portfolioModel>skill}"
-                                                press="onPressToggle1"
-                                                class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
-                                               
-                                                pressed="{portfolioModel>pressed}"
-
-                                            >
-                                                <customData>
-                                                    <core:CustomData
-                                                        key="skill"
-                                                        value="{portfolioModel>skill}"
-                                                        class="sapUiNoMarginTop sapUiNoMarginBottom"
-                                                    />
-                                                </customData>
-                                            </ToggleButton>
-                                        </l:HorizontalLayout>
-                                    </HBox>
-
+                            <l:HorizontalLayout
+                                id="skills"
+                                allowWrapping="true"
+                                content="{}"
+                            >
+                                <ToggleButton
+                                    text="{portfolioModel>skill}"
+                                    press="onPressToggle1"
+                                    class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
+                                    pressed="{portfolioModel>pressed}"
+                                >
+                                    <customData>
+                                        <core:CustomData
+                                            key="skill"
+                                            value="{portfolioModel>skill}"
+                                            class="sapUiNoMarginTop sapUiNoMarginBottom"
+                                        />
+                                    </customData>
+                                </ToggleButton>
+                            </l:HorizontalLayout>
+                        </HBox>
                     </f:GridContainer>
+                </Panel>
 
-                    	
-			</Panel >
-         
-			
-                    <core:Icon class="sapUiTinyMarginTop" src="sap-icon://settings" ></core:Icon>
-			<Panel headerText="Tools" height="100%" >
-				<layoutData>
-					<FlexItemData baseSize="17%" />
-				</layoutData>
-                    <f:GridContainer 
+                <core:Icon
+                    class="sapUiTinyMarginTop"
+                    src="sap-icon://settings"
+                />
+                <Panel
+                    headerText="Tools"
+                    height="100%"
+                >
+                    <layoutData>
+                        <FlexItemData baseSize="17%" />
+                    </layoutData>
+                    <f:GridContainer
                         id="group2"
                         columnsChange=".onColumnsChange"
                     >
                         <f:layout>
                             <f:GridContainerSettings
                                 rowSize="4rem"
-                                columnSize="4rem" 
+                                columnSize="4rem"
                             />
                         </f:layout>
-                     
-                         <HBox class="sapUiSmallMarginTopBottom">
-                                        <l:HorizontalLayout
-                                            id="tools"
-                                            allowWrapping="true"
-                                            content="{}"
-                                        >
-                                            <ToggleButton
-                                                text="{portfolioModel>tool}"
-                                                press="onPressToggle1"
-                                                class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
-                                               
-                                                 pressed="{portfolioModel>pressed}"
-                                            >
-                                                <customData>
-                                                    <core:CustomData
-                                                        key="tool"
-                                                        value="{portfolioModel>tool}"
-                                                        class="sapUiNoMarginTop sapUiNoMarginBottom"
-                                                    />
-                                                </customData>
-                                            </ToggleButton>
-                                        </l:HorizontalLayout>
-                                    </HBox> 
 
+                        <HBox class="sapUiSmallMarginTopBottom">
+                            <l:HorizontalLayout
+                                id="tools"
+                                allowWrapping="true"
+                                content="{}"
+                            >
+                                <ToggleButton
+                                    text="{portfolioModel>tool}"
+                                    press="onPressToggle1"
+                                    class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
+                                    pressed="{portfolioModel>pressed}"
+                                >
+                                    <customData>
+                                        <core:CustomData
+                                            key="tool"
+                                            value="{portfolioModel>tool}"
+                                            class="sapUiNoMarginTop sapUiNoMarginBottom"
+                                        />
+                                    </customData>
+                                </ToggleButton>
+                            </l:HorizontalLayout>
+                        </HBox>
 
-
-         
-
-
-<!-- 
+                        <!-- 
                                     <f:GridList
 		id="gridList" width="100%"
 		mode="None"
@@ -202,16 +206,19 @@
 		</f:GridListItem>
 	</f:GridList> -->
                     </f:GridContainer>
-
-
                 </Panel>
 
-
- <core:Icon class="sapUiTinyMarginTop" src="sap-icon://study-leave" ></core:Icon>
-                            <Panel headerText="Qualifications" height="100%">
-				<layoutData>
-					<FlexItemData baseSize="38%" />
-				</layoutData>
+                <core:Icon
+                    class="sapUiTinyMarginTop"
+                    src="sap-icon://study-leave"
+                />
+                <Panel
+                    headerText="Qualifications"
+                    height="100%"
+                >
+                    <layoutData>
+                        <FlexItemData baseSize="38%" />
+                    </layoutData>
                     <f:GridContainer>
                         <f:layout>
                             <f:GridContainerSettings
@@ -221,35 +228,31 @@
                         </f:layout>
 
                         <HBox class="sapUiSmallMarginTopBottom">
-                                        <l:HorizontalLayout
-                                            id="qualifications"
-                                            allowWrapping="true"
-                                            content="{}"
-                                        >
-                                            <ToggleButton
-                                                text="{portfolioModel>qualification}"
-                                                press="onPressToggle1"
-                                                class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
-                                                pressed="{portfolioModel>pressed}"
-
-                                            >
-                                                <customData>
-                                                    <core:CustomData
-                                                        key="qualification"
-                                                        value="{portfolioModel>qualification}"
-                                                        class="sapUiNoMarginTop sapUiNoMarginBottom"
-                                                    />
-                                                </customData>
-                                            </ToggleButton>
-                                        </l:HorizontalLayout>
-                                    </HBox>
-
+                            <l:HorizontalLayout
+                                id="qualifications"
+                                allowWrapping="true"
+                                content="{}"
+                            >
+                                <ToggleButton
+                                    text="{portfolioModel>qualification}"
+                                    press="onPressToggle1"
+                                    class="sapUiSmallMarginEnd sapUiTinyMarginBottom"
+                                    pressed="{portfolioModel>pressed}"
+                                >
+                                    <customData>
+                                        <core:CustomData
+                                            key="qualification"
+                                            value="{portfolioModel>qualification}"
+                                            class="sapUiNoMarginTop sapUiNoMarginBottom"
+                                        />
+                                    </customData>
+                                </ToggleButton>
+                            </l:HorizontalLayout>
+                        </HBox>
                     </f:GridContainer>
-
-                    	
-			</Panel >
-              </HBox>
-                <!-- </VBox> -->
+                </Panel>
+            </HBox>
+            <!-- </VBox> -->
             <!-- </ScrollContainer> -->
         </f:content>
     </f:DynamicPage>
