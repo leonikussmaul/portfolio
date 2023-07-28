@@ -20,38 +20,51 @@ sap.ui.define(
             formatter: formatter,
 
             onInit() {
+                var pressedSorter = new sap.ui.model.Sorter("pressed", false);
+                var toolSorter = new sap.ui.model.Sorter("tool", false);
+                var skillSorter = new sap.ui.model.Sorter("skill", false);
+
+                var qualificationSorter = new sap.ui.model.Sorter("qualification", false);
+
+                var aSorter = [];
+                aSorter.push( toolSorter, skillSorter, qualificationSorter);
+            
                 var oLayout1 = this.getView().byId("saptools");
                 var oTemplate1 = oLayout1.getBindingInfo("content").template;
                 oLayout1.bindAggregation("content", {
-                    path: 'portfolioModel>/saptools',
+                    path: "portfolioModel>/saptools",
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('tool', false)
+                    sorter: aSorter
                 });
 
-                var oLayout1 = this.getView().byId("skills");
-                var oTemplate1 = oLayout1.getBindingInfo("content").template;
-                oLayout1.bindAggregation("content", {
-                    path: 'portfolioModel>/skills',
-                    template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('skill', false)
+            
+                // Bindings for "skills" aggregation
+                var oLayout2 = this.getView().byId("skills");
+                var oTemplate2 = oLayout2.getBindingInfo("content").template;
+                oLayout2.bindAggregation("content", {
+                    path: "portfolioModel>/skills",
+                    template: oTemplate2,
+                    sorter: aSorter
                 });
-
-                var oLayout1 = this.getView().byId("tools");
-                var oTemplate1 = oLayout1.getBindingInfo("content").template;
-                oLayout1.bindAggregation("content", {
-                    path: 'portfolioModel>/tools',
-                    template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('tool', false)
+            
+                // Bindings for "tools" aggregation
+                var oLayout3 = this.getView().byId("tools");
+                var oTemplate3 = oLayout3.getBindingInfo("content").template;
+                oLayout3.bindAggregation("content", {
+                    path: "portfolioModel>/tools",
+                    template: oTemplate3,
+                    sorter: aSorter
                 });
-
-                var oLayout1 = this.getView().byId("qualifications");
-                var oTemplate1 = oLayout1.getBindingInfo("content").template;
-                oLayout1.bindAggregation("content", {
-                    path: 'portfolioModel>/qualifications',
-                    template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('qualification', false)
+            
+                // Bindings for "qualifications" aggregation
+                var oLayout4 = this.getView().byId("qualifications");
+                var oTemplate4 = oLayout4.getBindingInfo("content").template;
+                oLayout4.bindAggregation("content", {
+                    path: "portfolioModel>/qualifications",
+                    template: oTemplate4,
+                    sorter: aSorter
                 });
-
+                    
 
 
                 const oData = {

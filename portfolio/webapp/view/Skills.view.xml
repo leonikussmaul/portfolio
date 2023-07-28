@@ -225,7 +225,7 @@
                     src="sap-icon://study-leave"
                 />
                 <Panel
-                    headerText="Qualifications"
+                    headerText="Achievements"
                     height="100%"
                 >
                     <layoutData>

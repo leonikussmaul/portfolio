@@ -39,9 +39,10 @@
                     width="100%"
                     height="80%"
                 >
-                    <HBox>
-                        <FormattedText htmlText="{portfolioModel>/aboutMe}" />
-                    </HBox>
+                   <HBox>
+    <FormattedText htmlText="{portfolioModel>/aboutMe}" />
+</HBox>
+
 
                     <HBox>
                         <Image
