@@ -1,0 +1,49 @@
+<core:FragmentDefinition
+    xmlns:m="sap.m"
+    xmlns="sap.f"
+    xmlns:core="sap.ui.core"
+>
+    <ShellBar
+        title="{i18n>shellBarTitle}"
+        secondTitle="{i18n>secondTitle}"
+        homeIcon="./images/wave.jpeg"
+        homeIconPressed="onHomeIconPressed"
+    >
+        <additionalContent>
+          
+
+               <m:Button
+            text="Open Resume"
+                press="onOpenResume"
+                icon="sap-icon://chain-link"
+                tooltip="Click here to download &amp; view my Resume"
+            />
+
+            	<m:MenuButton text="GitHub" >
+			<m:menu>
+				<m:Menu>
+					<m:MenuItem text="Personal"  press="onPersonalGithub" />
+					<m:MenuItem text="Professional"  press="onProfessionalGithub" />
+				</m:Menu>
+			</m:menu>
+		</m:MenuButton>
+
+
+      
+             <m:Avatar  press="onOpenLinkedin" src="./images/linkedin.jpeg" displaySize="XS" displayShape="Square"
+                
+            />
+<!-- 
+             <m:Avatar  press="onOpenGitHub" src="./images/github.jpeg" displaySize="XS" displayShape="Square"
+            /> -->
+
+            
+            
+        </additionalContent>
+        <!-- <profile>
+            <m:Avatar src="./images/linkedin.jpeg"
+                initials="{parts: [{path: 'user>/firstname'}, {path: 'user>/lastname'}], formatter: '.formatter.initialsFormatter'}"
+            />
+        </profile> -->
+    </ShellBar>
+</core:FragmentDefinition>

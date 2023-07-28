@@ -18,6 +18,7 @@
     },
     "sap.ui": {
         "technology": "UI5",
+        "fullWidth": true,
         "icons": {
             "icon": "",
             "favIcon": "",
@@ -78,20 +79,34 @@
             },
             "routes": [
                 {
-                    "name": "RouteMain",
+                    "name": "Main",
                     "pattern": ":?query:",
                     "target": [
-                        "TargetMain"
+                        "Main"
+                    ]
+                },
+                {
+                    "name": "Skills",
+                    "pattern": "Skills",
+                    "target": [
+                        "Skills"
                     ]
                 }
             ],
             "targets": {
-                "TargetMain": {
+                "Main": {
                     "viewType": "XML",
                     "transition": "slide",
                     "clearControlAggregation": false,
                     "viewId": "Main",
                     "viewName": "Main"
+                },
+                "Skills": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Skills",
+                    "viewName": "Skills"
                 }
             }
         },
