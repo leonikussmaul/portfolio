@@ -17,6 +17,13 @@
                 tooltip="Click here to download &amp; view my Resume"
             />
 
+             <m:Button
+                text="SAP Community"
+                press="onOpenCommunity"
+                icon="sap-icon://travel-request" 
+                tooltip="Click here to connect with me in the SAP Community"
+            />
+
             <m:MenuButton text="GitHub" icon="sap-icon://command-line-interfaces">
                 <m:menu>
                     <m:Menu>

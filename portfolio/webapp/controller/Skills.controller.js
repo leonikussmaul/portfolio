@@ -248,42 +248,42 @@ sap.ui.define(
             },
 
 
-            onSelectType: function(oEvent){
+            onSelectType: function (oEvent) {
                 var sKey = oEvent.getSource().getSelectedKey();
-                var oModel = this.getView().getModel("portfolioModel"); 
+                var oModel = this.getView().getModel("portfolioModel");
                 var aFilters = [];
-      
-                if(sKey !=="Both"){
-                var aFilters = [
-                  new Filter({
-                      filters: [
-                          new Filter({ path: "type", operator: FilterOperator.EQ, value1: sKey, caseSensitive: false }),
-                      ],
-                      and: false
-                  })
-              ];
-              MessageToast.show("Only '" + sKey + "' results are shown!")
-            } else MessageToast.show("All results are shown!");
-      
-              var oList = this.byId("saptools");
-              var oBinding = oList.getBinding("content")
-              oBinding.filter(aFilters, FilterType.Application);
 
-              var oList = this.byId("skills");
-              var oBinding = oList.getBinding("content")
-              oBinding.filter(aFilters, FilterType.Application);
+                if (sKey !== "Both") {
+                    var aFilters = [
+                        new Filter({
+                            filters: [
+                                new Filter({ path: "type", operator: FilterOperator.EQ, value1: sKey, caseSensitive: false }),
+                            ],
+                            and: false
+                        })
+                    ];
+                    MessageToast.show("Only '" + sKey + "' results are shown!")
+                } else MessageToast.show("All results are shown!");
 
-              var oList = this.byId("tools");
-              var oBinding = oList.getBinding("content")
-              oBinding.filter(aFilters, FilterType.Application);
+                var oList = this.byId("saptools");
+                var oBinding = oList.getBinding("content")
+                oBinding.filter(aFilters, FilterType.Application);
 
-              var oList = this.byId("qualifications");
-              var oBinding = oList.getBinding("content")
-              oBinding.filter(aFilters, FilterType.Application);
-             
-                  
-          
-              }
+                var oList = this.byId("skills");
+                var oBinding = oList.getBinding("content")
+                oBinding.filter(aFilters, FilterType.Application);
+
+                var oList = this.byId("tools");
+                var oBinding = oList.getBinding("content")
+                oBinding.filter(aFilters, FilterType.Application);
+
+                var oList = this.byId("qualifications");
+                var oBinding = oList.getBinding("content")
+                oBinding.filter(aFilters, FilterType.Application);
+
+
+
+            }
 
 
         });

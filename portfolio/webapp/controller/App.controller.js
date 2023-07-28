@@ -36,9 +36,14 @@ sap.ui.define(
 
       onHomeIconPressed: function () {
         var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-        oRouter.navTo("Main");
+        oRouter.navTo("Welcome");
+        this.getOwnerComponent().getModel("globalModel").setProperty("/selectedKey", "");
       },
 
+      onOpenCommunity: function () {
+        var sUrl = 'https://people.sap.com/leonikussmaul';
+        library.URLHelper.redirect(sUrl, true);
+      },
       onOpenLinkedin: function () {
         var sUrl = 'https://www.linkedin.com/in/leoni-anica-kussmaul';
         library.URLHelper.redirect(sUrl, true);
@@ -155,9 +160,6 @@ sap.ui.define(
         this.onDialogOpen("myportfolio.portfolio.view.fragments.AboutMePopup");
 
       },
-
-
-
 
 
     });

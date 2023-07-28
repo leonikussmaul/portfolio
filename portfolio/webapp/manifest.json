@@ -80,7 +80,7 @@
             "routes": [
                 {
                     "name": "Main",
-                    "pattern": ":?query:",
+                    "pattern": "Main",
                     "target": [
                         "Main"
                     ]
@@ -97,6 +97,13 @@
                     "pattern": "Videos",
                     "target": [
                         "Videos"
+                    ]
+                },
+                {
+                    "name": "Welcome",
+                    "pattern": ":?query:",
+                    "target": [
+                        "Welcome"
                     ]
                 }
             ],
@@ -121,6 +128,13 @@
                     "clearControlAggregation": false,
                     "viewId": "Videos",
                     "viewName": "Videos"
+                },
+                "Welcome": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "Welcome",
+                    "viewName": "Welcome"
                 }
             }
         },

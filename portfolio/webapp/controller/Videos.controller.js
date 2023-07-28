@@ -29,20 +29,20 @@ sap.ui.define(
                             "subTitle": "Team-based Web Application",
                             "icon": "sap-icon://Netweaver-business-client",
                             "description": "Need-Based Application that leverages a <strong>user-friendly</strong> and <strong>intuitive UX/UI</strong> while putting business <strong>efficiency</strong> and <strong>productivity</strong> first.",
-                            "image": "/images/demandGenius/overview.jpeg",
+                            "image": "./images/demandGenius/overview.jpeg",
                             "details": "End-to-end design & development ownership using various tools & technologies, such as:</li> <ul><li>SAP BTP (Cloud Platform)</li><li>SAPUI5 JavaScript Front-End Framework</li><li>SAP Business Application Studio IDE</li></ul>",
                         },
                         {
                             "name": "BTP Video Series",
                             "subTitle": "Explaining the 4 Pillar's of our Cloud Platform for the SAP.com Landing Page",
                             "icon": "sap-icon://cloud",
-                            "image": "/images/btpVideos.jpeg"
+                            "image": "./images/btpVideos.jpeg"
                         },
                         {
                             "name": "Integration [SAP Internal Only]",
                             "subTitle": "What, Why, How?",
                             "icon": "sap-icon://puzzle",
-                            "image": "/images/integration.jpeg",
+                            "image": "./images/integration.jpeg",
                         },
                     ]
                 };

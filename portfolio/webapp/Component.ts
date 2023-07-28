@@ -1,5 +1,6 @@
 import BaseComponent from "sap/ui/core/UIComponent";
 import { createDeviceModel } from "./model/models";
+import JSONModel from "sap/ui/model/json/JSONModel";
 
 /**
  * @namespace myportfolio.portfolio
@@ -24,5 +25,11 @@ export default class Component extends BaseComponent {
 
         // set the device model
         this.setModel(createDeviceModel(), "device");
+
+        const globalData = {
+            selectedKey: ""
+        };
+        const globalModel = new JSONModel(globalData);
+        this.setModel(globalModel, "globalModel");
 	}
 }

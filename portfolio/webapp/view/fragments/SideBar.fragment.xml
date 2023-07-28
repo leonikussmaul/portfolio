@@ -6,8 +6,8 @@
     <tnt:SideNavigation
         id="sideNavigation"
         expanded="false"
-        selectedKey="{/selectedKey}"
-        itemSelect=".onItemSelect"
+        selectedKey="{globalModel>/selectedKey}"
+        itemSelect=".onItemSelect" 
     >
         <tnt:NavigationList>
             <tnt:NavigationListItem
@@ -17,10 +17,12 @@
             />
 
             <tnt:NavigationListItem
+            id="portfolioItem"
                 text="Portfolio"
                 icon="sap-icon://business-objects-mobile"
                 select="onNavToPortfolio"
                 tooltip="Go to the Portfolio Overview"
+                key="portfolio"
             />
 
             <tnt:NavigationListItem
@@ -28,6 +30,7 @@
                 icon="sap-icon://developer-settings"
                 select="onNavToSkills"
                 tooltip="Go to the Skills Overview"
+                key="skills"
             />
 
             <tnt:NavigationListItem
@@ -35,6 +38,7 @@
                 icon="sap-icon://media-play"
                 select="onNavToVideos"
                 tooltip="Go to my Videos"
+                key="videos"
             />
         </tnt:NavigationList>
         <tnt:fixedItem>
@@ -43,12 +47,14 @@
                     text="Email"
                     select="onOpenEmail"
                     icon="sap-icon://email"
+                    key="email"
                 />
 
                 <tnt:NavigationListItem
                     text="About Me"
                     select="onOpenAbout"
                     icon="sap-icon://hint"
+                    key="aboutme"
                 />
             </tnt:NavigationList>
         </tnt:fixedItem>
