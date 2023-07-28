@@ -38,7 +38,7 @@ sap.ui.define(
   
          
 const oData = {
-    UI: [
+    items: [
         {
             "name": "Demand Genius",
             "subTitle": "Team-based Web Application",
@@ -48,7 +48,8 @@ const oData = {
             "linkText": "Click Here for a Video Demo",
             "Width": "50",
             "Height": "30",
-            "image": "./images/demandGenius/overview.jpeg",
+            "image": "/images/demandGenius/overview.jpeg",
+            "type": "UI"
           },   
           {
             "name": "CGM",
@@ -59,7 +60,8 @@ const oData = {
             "linkText": "Click Here for a Video Demo",
             "Width": "50",
             "Height": "30",
-            "image": "./images/cgm/CGM.jpeg"
+            "image": "/images/cgm/CGM.jpeg",
+            "type": "UI"
           },   
           {
             "name": "Intercompany Invoice Processing",
@@ -70,11 +72,9 @@ const oData = {
             "linkText": "Click Here for a Video Demo",
             "Width": "50",
             "Height": "30",
-            "image": "./images/intercompany/intercompany.jpeg"
+            "image": "/images/intercompany/intercompany.jpeg",
+            "type": "UI"
           },   
-    ],
-    UX: [
-          
           {
             "name": "Mockup for the Largest European Public Sector Organization",
             "subTitle": "30+ High-Fid Screens",
@@ -84,7 +84,8 @@ const oData = {
             "linkText": "Click Here for a Video Demo",
             "Width": "50",
             "Height": "30",
-            "image": "./images/EC/european.jpeg"
+            "image": "/images/EC/european.jpeg",
+            "type": "UX"
           },   
           {
             "name": "UserFirst",
@@ -95,20 +96,10 @@ const oData = {
             "linkText": "Click Here for a Video Demo",
             "Width": "50",
             "Height": "30",
-            "image": "./images/userFirst/userFirst.jpeg"
+            "image": "/images/userFirst/userFirst.jpeg",
+            "type": "UX"
           },
-        //   {
-        //     "name": "Agile Transformation Guide",
-        //     "subTitle": "Invoice Posting to S/4HANA Cloud",
-        //     "icon": "sap-icon://collections-insight",
-        //     "description": "SAPUI5 Extension: One Application each for the Customer and the Supplier side to cover the complete business process.",
-        //     "details": "<ul><li>Mapping Tables for Tax Conversion using Custom Business Objects.</li><li>UUID Generation from Government Authorities.</li><li>SOAP UI and API Management.</li></ul>",
-        //     "linkText": "Click Here for a Video Demo",
-        //     "Width": "50",
-        //     "Height": "30",
-        //     "image": "./images/agile/agile.jpeg"
-        //   },   
-    ],
+    ]
   };
   
   const oModel = new JSONModel(oData);
@@ -133,6 +124,33 @@ const oData = {
             
 
         },
+
+        onSelectType: function(oEvent){
+          var sKey = oEvent.getSource().getSelectedKey();
+          var oModel = this.getView().getModel("portfolioModel"); 
+          var aFilters = [];
+
+          if(sKey !=="Both"){
+          var aFilters = [
+            new Filter({
+                filters: [
+                    new Filter({ path: "type", operator: FilterOperator.Contains, value1: sKey, caseSensitive: false }),
+                ],
+                and: false
+            })
+        ];
+        MessageToast.show("Only '" + sKey + "' results are shown!")
+      } else MessageToast.show("All results are shown!");
+
+        var oList = this.byId("portfolioList");
+        var oBinding = oList.getBinding("pages")
+        oBinding.filter(aFilters, FilterType.Application);
+       
+            
+    
+        }
+
+          
   
       
   

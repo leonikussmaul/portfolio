@@ -25,7 +25,7 @@ sap.ui.define(
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/saptools',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('pressed', false)
+                    sorter: new sap.ui.model.Sorter('tool', false)
                 });
 
                 var oLayout1 = this.getView().byId("skills");
@@ -33,7 +33,7 @@ sap.ui.define(
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/skills',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('pressed', false)
+                    sorter: new sap.ui.model.Sorter('skill', false)
                 });
 
                 var oLayout1 = this.getView().byId("tools");
@@ -41,7 +41,7 @@ sap.ui.define(
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/tools',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('pressed', false)
+                    sorter: new sap.ui.model.Sorter('tool', false)
                 });
 
                 var oLayout1 = this.getView().byId("qualifications");
@@ -49,7 +49,7 @@ sap.ui.define(
                 oLayout1.bindAggregation("content", {
                     path: 'portfolioModel>/qualifications',
                     template: oTemplate1,
-                    sorter: new sap.ui.model.Sorter('pressed', false)
+                    sorter: new sap.ui.model.Sorter('qualification', false)
                 });
 
 
@@ -59,136 +59,173 @@ sap.ui.define(
 
                         {
                             "skill": "JavaScript",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
                             "skill": "HTML5",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
                             "skill": "CSS3",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
-                            "skill": "C"
+                            "skill": "C",
+                            "type": "UI"
                         },
                         {
                             "skill": "Design Thinking",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UX"
                         },
                         {
-                            "skill": "OData APIs"
+                            "skill": "OData APIs",
+                            "type": "UI"
                         },
                         {
-                            "skill": "REST APIs"
+                            "skill": "REST APIs",
+                            "type": "UI"
                         },
                         {
-                            "skill": "Wireframing"
+                            "skill": "Wireframing",
+                            "type": "UX"
                         },
                         {
-                            "skill": "Prototyping"
+                            "skill": "Prototyping",
+                            "type": "UX"
                         },
                         {
                             "skill": "German [native]",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "Both"
                         },
                         {
                             "skill": "English [native]",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "Both"
                         },
                         {
-                            "skill": "Croatian [native]"
+                            "skill": "Croatian [native]",
+                            "type": "Both"
                         },
                         {
-                            "skill": "French [beginner]"
+                            "skill": "French [beginner]",
+                            "type": "Both"
                         },
                         {
-                            "skill": "Spanish [beginner]"
+                            "skill": "Spanish [beginner]",
+                            "type": "Both"
                         },
                         {
-                            "skill": "SCRUM"
+                            "skill": "SCRUM",
+                            "type": "Both"
                         }
                     ],
                     tools: [
 
                         {
                             "tool": "Figma",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UX"
                         },
                         {
-                            "tool": "GIT"
+                            "tool": "GIT",
+                            "type": "UI"
                         },
                         {
-                            "tool": "Postman"
+                            "tool": "Postman",
+                            "type": "UI"
                         },
                         {
                             "tool": "Visual Studio Code",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
-                            "tool": "Jira"
+                            "tool": "Jira",
+                            "type": "UI"
                         },
                         {
-                            "tool": "MURAL"
+                            "tool": "MURAL",
+                            "type": "UX"
                         },
                     ],
                     saptools: [
                         {
                             "tool": "SAPUI5 JavaScript Front-End Framework",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
-                            "tool": "Business Application Studio IDE"
+                            "tool": "Business Application Studio IDE",
+                            "type": "UI"
                         },
                         {
                             "tool": "Business Technology Platform (BTP)",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
                             "tool": "Fiori",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UX"
                         },
                         {
-                            "tool": "Fiori Elements"
+                            "tool": "Fiori Elements",
+                            "type": "UI"
                         },
                         {
-                            "tool": "SAP Build Low-Code/No-Code"
+                            "tool": "SAP Build Low-Code/No-Code",
+                            "type": "UI"
                         },
                         {
                             "tool": "Cloud Application Programming Model (CAP)",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
-                            "tool": "SolMan"
+                            "tool": "SolMan",
+                            "type": "UI"
                         }
                     ],
                     qualifications: [
                         {
                             "qualification": "Harvard CS50: Intro to Computer Science",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
-                            "qualification": "SAP Services Hero Award 2021"
+                            "qualification": "SAP Services Hero Award 2021",
+                            "type": "Both"
                         },
                         {
-                            "qualification": "SAPX01 – SAP User Experience Fundamentals and Best Practices"
+                            "qualification": "SAPX01 – SAP User Experience Fundamentals and Best Practices",
+                            "type": "UX"
                         },
                         {
                             "qualification": "SAPUX402 – Advanced SAPUI5 Development",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UI"
                         },
                         {
                             "qualification": "BBA in Marketing & Design [4.00 GPA]",
-                            "pressed": "true"
+                            "pressed": "true",
+                            "type": "UX"
                         },
                         {
-                            "qualification": "Google: The Fundamentals of Digital Marketing"
+                            "qualification": "Google: The Fundamentals of Digital Marketing",
+                            "type": "Both"
                         },
                         {
-                            "qualification": "Google Analytics for Beginners"
+                            "qualification": "Google Analytics for Beginners",
+                            "type": "Both"
                         },
                         {
-                            "qualification": "IELTS English: 8.0"
+                            "qualification": "IELTS English: 8.0",
+                            "type": "Both"
                         },
 
 
@@ -210,6 +247,43 @@ sap.ui.define(
 
             },
 
+
+            onSelectType: function(oEvent){
+                var sKey = oEvent.getSource().getSelectedKey();
+                var oModel = this.getView().getModel("portfolioModel"); 
+                var aFilters = [];
+      
+                if(sKey !=="Both"){
+                var aFilters = [
+                  new Filter({
+                      filters: [
+                          new Filter({ path: "type", operator: FilterOperator.EQ, value1: sKey, caseSensitive: false }),
+                      ],
+                      and: false
+                  })
+              ];
+              MessageToast.show("Only '" + sKey + "' results are shown!")
+            } else MessageToast.show("All results are shown!");
+      
+              var oList = this.byId("saptools");
+              var oBinding = oList.getBinding("content")
+              oBinding.filter(aFilters, FilterType.Application);
+
+              var oList = this.byId("skills");
+              var oBinding = oList.getBinding("content")
+              oBinding.filter(aFilters, FilterType.Application);
+
+              var oList = this.byId("tools");
+              var oBinding = oList.getBinding("content")
+              oBinding.filter(aFilters, FilterType.Application);
+
+              var oList = this.byId("qualifications");
+              var oBinding = oList.getBinding("content")
+              oBinding.filter(aFilters, FilterType.Application);
+             
+                  
+          
+              }
 
 
         });

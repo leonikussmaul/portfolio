@@ -28,11 +28,15 @@
                         id="headerTitle"
                     />
                 </f:heading>
+                
+
+
             </f:DynamicPageTitle>
         </f:title>
         <f:header />
 
         <f:content>
+
             <Carousel
                 height="auto"
                 width="100%"
@@ -40,16 +44,16 @@
 				path: 'portfolioModel>/videos'
 			}"
             >
-                <customLayout>
-                    <CarouselLayout />
-                </customLayout>
+                	<customLayout>
+				<CarouselLayout visiblePagesCount="2" />
+			</customLayout>
                 <ScrollContainer
                     vertical="false"
                     horizontal="false"
                     class="sapUiContentPadding"
                 >
                     <f:Card
-                        height="100%"
+                        height="auto"
                         width="100%"
                     >
                         <f:header>
@@ -70,15 +74,15 @@
                                 <Image
                                     src="{portfolioModel>image}"
                                     press="onOpenDemo"
-                                    class="sapUiNoMargin"
-                                    width="60%"
-                                    alt="Screenshot #1 of Demand Genius UI"
+                                    class="sapUiSmallMarginBegin"
+                                    width="90%"
                                 />
                             </HBox>
                         </f:content>
                     </f:Card>
                 </ScrollContainer>
             </Carousel>
+
         </f:content>
     </f:DynamicPage>
 </mvc:View>

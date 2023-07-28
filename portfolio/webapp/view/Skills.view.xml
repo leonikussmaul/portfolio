@@ -33,6 +33,18 @@
                      <core:Icon src="sap-icon://rhombus-milestone-2" color="#0070f2"/>
 						<Label text="Key Skills" class="sapUiTinyMarginBegin"/>
 					</f:snappedContent>
+
+                    <f:actions>
+						<OverflowToolbar>
+							<SegmentedButton selectedKey="Both" selectionChange="onSelectType">
+					<items>
+					<SegmentedButtonItem text="Both" width="50px" key="Both" />
+						<SegmentedButtonItem text="UI" width="60px"  key="UI" icon="sap-icon://syntax"/>
+						<SegmentedButtonItem text="UX" width="60px" key="UX"  icon="sap-icon://activate"  />
+					</items>
+				</SegmentedButton>
+						</OverflowToolbar>
+					</f:actions>
 					
             </f:DynamicPageTitle>
         </f:title>
