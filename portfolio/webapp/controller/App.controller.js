@@ -64,11 +64,6 @@ sap.ui.define(
         library.URLHelper.redirect(sUrl, true);
       },
 
-      onOpenResume: function () {
-        var sUrl = 'https://leoni-kussmaul-resume.tiiny.site';
-        library.URLHelper.redirect(sUrl, true);
-      },
-
 
       onNavToPortfolio: function (oEvent) {
         var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
@@ -160,6 +155,13 @@ sap.ui.define(
         this.onDialogOpen("myportfolio.portfolio.view.fragments.AboutMePopup");
 
       },
+
+      onOpenResume: function () {
+        this.onDialogOpen("myportfolio.portfolio.view.fragments.Resume");
+        // var sUrl = 'https://leoni-kussmaul-resume.tiiny.site';
+        // library.URLHelper.redirect(sUrl, true);
+      },
+
 
 
     });
