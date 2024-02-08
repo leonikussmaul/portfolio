@@ -41,7 +41,7 @@ sap.ui.define(
       },
 
       onOpenCommunity: function () {
-        var sUrl = 'https://people.sap.com/leonikussmaul';
+        var sUrl = 'https://community.sap.com/t5/user/viewprofilepage/user-id/126740';
         library.URLHelper.redirect(sUrl, true);
       },
       onOpenLinkedin: function () {
@@ -93,7 +93,7 @@ sap.ui.define(
       },
 
       onOpenEmail: function (oEvent) {
-        library.URLHelper.triggerEmail("leoni.kussmaul@sap.com", "New Request", false, false, false, true);
+        library.URLHelper.triggerEmail("leoni.kussmaul@sap.com", "Hello", false, false, false, true);
       },
 
       onOpenPopover: function (oEvent, sFragment) {
@@ -160,6 +160,18 @@ sap.ui.define(
         this.onDialogOpen("myportfolio.portfolio.view.fragments.Resume");
         // var sUrl = 'https://leoni-kussmaul-resume.tiiny.site';
         // library.URLHelper.redirect(sUrl, true);
+      },
+
+      onThemePicker: function(oEvent){
+        var sTheme = oEvent.getParameters().item.getKey(); 
+        if(sTheme === "MorningHorizon"){
+          sap.ui.getCore().applyTheme("sap_horizon"); 
+
+        } else if(sTheme === "EveningHorizon"){
+          sap.ui.getCore().applyTheme("sap_horizon_dark"); 
+
+        }
+
       },
 
 

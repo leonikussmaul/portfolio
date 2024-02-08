@@ -74,7 +74,7 @@ ul li {
   }
   
   .button path {
-    stroke: #4db1ff;
+    stroke: rgba(255, 255, 255, 0.7); 
     stroke-width: 8px;
     stroke-dasharray: 0 1500;
   }
@@ -95,9 +95,11 @@ ul li {
   
 
   .page2BgImg {
-    /* background-image: url('/webapp/images/background.jpg'); */
+    /* background-image: url('/images/background.jpg'); */
     background-image: url('/dfbde441-fd5f-4428-8673-bebf2f326b46.myportfolioportfolio.myportfolioportfolio-0.0.1/images/background.jpg');
+    /* background-image: url('/dfbde441-fd5f-4428-8673-bebf2f326b46.myportfolioportfolio.myportfolioportfolio-0.0.1/images/Picture1.png'); */
     background-size: 100% 100%;
+    
   }
 
   .sapUiSizeCompact .sapMPageHeader .sapMIBar, .sapUiSizeCompact .sapMPageFooter .sapMIBar {
@@ -105,4 +107,7 @@ ul li {
 }
 
 /* styles.css */
+
+
+
 

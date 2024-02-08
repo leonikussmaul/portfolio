@@ -90,13 +90,13 @@ sap.ui.define(
                             "type": "UI"
                         },
                         {
+                            "skill": "ReactJS",
+                            "type": "UI"
+                        },
+                        {
                             "skill": "Design Thinking",
                             "pressed": "true",
                             "type": "UX"
-                        },
-                        {
-                            "skill": "OData APIs",
-                            "type": "UI"
                         },
                         {
                             "skill": "REST APIs",
@@ -111,6 +111,10 @@ sap.ui.define(
                             "type": "UX"
                         },
                         {
+                            "skill": "UX Writing",
+                            "type": "UX"
+                        },
+                        {
                             "skill": "German [native]",
                             "pressed": "true",
                             "type": "Both"
@@ -122,14 +126,6 @@ sap.ui.define(
                         },
                         {
                             "skill": "Croatian [native]",
-                            "type": "Both"
-                        },
-                        {
-                            "skill": "French [beginner]",
-                            "type": "Both"
-                        },
-                        {
-                            "skill": "Spanish [beginner]",
                             "type": "Both"
                         },
                         {
@@ -202,11 +198,24 @@ sap.ui.define(
                         {
                             "tool": "SolMan",
                             "type": "UI"
-                        }
+                        },
+                        {
+                            "tool": "OData APIs",
+                            "type": "UI"
+                        },
+                        {
+                            "tool": "Design-Led Development",
+                            "type": "UX"
+                        },
                     ],
                     qualifications: [
                         {
                             "qualification": "Harvard CS50: Intro to Computer Science",
+                            "pressed": "true",
+                            "type": "UI"
+                        },
+                        {
+                            "qualification": "C_CPE_14 SAP Certified Development Associate",
                             "pressed": "true",
                             "type": "UI"
                         },
@@ -238,6 +247,10 @@ sap.ui.define(
                         },
                         {
                             "qualification": "IELTS English: 8.0",
+                            "type": "Both"
+                        },
+                        {
+                            "qualification": "SAP Community: Top Contributor",
                             "type": "Both"
                         },
 

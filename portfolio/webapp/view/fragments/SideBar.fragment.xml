@@ -56,6 +56,15 @@
                     icon="sap-icon://hint"
                     key="aboutme"
                 />
+
+
+                	<tnt:NavigationListItem text="Theme Picker" icon="sap-icon://palette" 
+                tooltip="Theme Picker">
+				<tnt:NavigationListItem text="Morning Horizon (Light)" key="MorningHorizon" select="onThemePicker"/>
+				<tnt:NavigationListItem text="Evening Horizon (Dark)" key="EveningHorizon" select="onThemePicker"/>
+			</tnt:NavigationListItem>
+
+
             </tnt:NavigationList>
         </tnt:fixedItem>
     </tnt:SideNavigation>

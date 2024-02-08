@@ -42,6 +42,10 @@
         text="Click here to explore my UX/UI Portfolio" class="myLargeButton" 
         press="onWelcomePress" 
       />
+
+  
+
+
     </VBox>
     </VBox>
   <!-- </f:content> -->

@@ -64,6 +64,17 @@ sap.ui.define(
               "type": "UI"
             },
             {
+              "name": "Configurable Experience Acceess Point",
+              "subTitle": "Single source of truth",
+              "icon": "sap-icon://customize",
+              "description": "<strong>Role-based</strong> dashboard that brings together various applications from the SAP ecosystem and functions as a <strong>single source of truth</strong>.",
+              "details": "<ul><li>Drive and manage Engagement Plans for Customer Success.</li><li>Full-Stack development and end-to-end integration of various productive applications and web components.</li><li>Single Point of Contact for UX and Design Decisions.</li></ul>",
+              "Width": "50",
+              "Height": "30",
+              "image": "./images/ngsp/cardConfig.png",
+              "type": "UI"
+            },
+            {
               "name": "Intercompany Invoice Processing",
               "subTitle": "Invoice Posting to S/4HANA Cloud",
               "icon": "sap-icon://collections-insight",
