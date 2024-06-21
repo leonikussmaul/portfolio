@@ -12,7 +12,7 @@
 |**Application Title**<br>App Title|
 |**Namespace**<br>myportfolio|
 |**UI5 Theme**<br>sap_horizon_dark|
-|**UI5 Version**<br>1.116.0|
+|**UI5 Version**<br>1.124.0|
 |**Enable Code Assist Libraries**<br>True|
 |**Enable TypeScript**<br>True|
 |**Add Eslint configuration**<br>False|

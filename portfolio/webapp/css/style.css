@@ -17,7 +17,7 @@ ul li {
 
   /* styles.css */
 .myLargeButton .sapMBtnInner {
-    font-size: 24px!important; 
+    font-size: 16px!important; 
     height: 30px !important;
    padding:20px 15px !important;
    display: flex;
@@ -28,9 +28,21 @@ ul li {
    background: rgba(0,0,0,0.4);
    border: none; 
    opacity: 0.9;
-   color: white;
+   /* color: #4db1ff */
+   color: #f58b00
   }
 
+  .sapMBtnIcon {
+    font-size: 1.375rem;
+    line-height: 2.375rem;
+    width: 2.375rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    max-height: 2.375rem;
+    color: #f58b00!important;
+}
 
 .myCircle {
     display: inline-block;
@@ -96,11 +108,14 @@ ul li {
 
   .page2BgImg {
     /* background-image: url('/images/background.jpg'); */
-    background-image: url('/dfbde441-fd5f-4428-8673-bebf2f326b46.myportfolioportfolio.myportfolioportfolio-0.0.1/images/background.jpg');
+     /* background-image: url('/images/background.gif'); */
+    background-image: url('/dfbde441-fd5f-4428-8673-bebf2f326b46.myportfolioportfolio.myportfolioportfolio-0.0.1/images/background.gif');
     /* background-image: url('/dfbde441-fd5f-4428-8673-bebf2f326b46.myportfolioportfolio.myportfolioportfolio-0.0.1/images/Picture1.png'); */
     background-size: 100% 100%;
     
   }
+
+  
 
   .sapUiSizeCompact .sapMPageHeader .sapMIBar, .sapUiSizeCompact .sapMPageFooter .sapMIBar {
     height: 0rem!important;

@@ -43,6 +43,14 @@
         </tnt:NavigationList>
         <tnt:fixedItem>
             <tnt:NavigationList>
+
+              <tnt:NavigationListItem
+                    text="About Me"
+                    select="onOpenAbout"
+                    icon="sap-icon://hint"
+                    key="aboutme"
+                />
+                
                 <tnt:NavigationListItem
                     text="Email"
                     select="onOpenEmail"
@@ -50,19 +58,14 @@
                     key="email"
                 />
 
-                <tnt:NavigationListItem
-                    text="About Me"
-                    select="onOpenAbout"
-                    icon="sap-icon://hint"
-                    key="aboutme"
-                />
+              
 
-
+<!-- 
                 	<tnt:NavigationListItem text="Theme Picker" icon="sap-icon://palette" 
                 tooltip="Theme Picker">
 				<tnt:NavigationListItem text="Morning Horizon (Light)" key="MorningHorizon" select="onThemePicker"/>
 				<tnt:NavigationListItem text="Evening Horizon (Dark)" key="EveningHorizon" select="onThemePicker"/>
-			</tnt:NavigationListItem>
+			</tnt:NavigationListItem> -->
 
 
             </tnt:NavigationList>

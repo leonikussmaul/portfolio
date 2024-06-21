@@ -104,7 +104,7 @@
                                                             <Image
                                                                 src="{portfolioModel>image}"
                                                                 press="onOpenDemo"
-                                                                width="100%"
+                                                                width="100%" 
                                                                 alt="Screenshot #1 of Demand Genius UI"
                                                             />
                                                         </HBox>
@@ -112,6 +112,7 @@
                                                             class="sapUiResponsiveMargin"
                                                             htmlText="{portfolioModel>details}"
                                                         />
+                                                        <!-- <IllustratedMessage   illustrationType="tnt-Avatar" /> -->
                                                     </l:BlockLayoutCell>
                                                 </l:BlockLayoutRow>
                                             </l:BlockLayout>

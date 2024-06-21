@@ -28,7 +28,7 @@
     <VBox alignItems="Center" justifyContent="Center">
        
 
-       	<core:HTML   content='
+       	<!-- <core:HTML   content='
             &lt;div class=&quot;button&quot;&gt;
               &lt;button&gt;Welcome &lt;/button&gt;
               &lt;svg viewBox=&quot;0 0 500 150&quot; preserveAspectRatio=&quot;none&quot;&gt;
@@ -36,12 +36,20 @@
               &lt;/svg&gt;
             &lt;/div&gt;
           '
-        /> 
+        />  -->
 
-        <Button
-        text="Click here to explore my UX/UI Portfolio" class="myLargeButton" 
+         <IllustratedMessage   illustrationType="tnt-Avatar" illustrationSize="Scene" title="Welcome to my Portfolio" 
+         >
+         <additionalContent>
+
+           <Button
+        text="Click here to enter"  icon="sap-icon://cursor-arrow" class="myLargeButton"
         press="onWelcomePress" 
       />
+         </additionalContent>
+           </IllustratedMessage >
+
+      
 
   
 

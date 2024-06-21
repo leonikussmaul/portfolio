@@ -111,10 +111,6 @@ sap.ui.define(
                             "type": "UX"
                         },
                         {
-                            "skill": "UX Writing",
-                            "type": "UX"
-                        },
-                        {
                             "skill": "German [native]",
                             "pressed": "true",
                             "type": "Both"
@@ -218,6 +214,11 @@ sap.ui.define(
                             "qualification": "C_CPE_14 SAP Certified Development Associate",
                             "pressed": "true",
                             "type": "UI"
+                        },
+                        {
+                            "qualification": "Certificate: Generative AI at SAP",
+                            "pressed": "true",
+                            "type": "Both"
                         },
                         {
                             "qualification": "SAP Services Hero Award 2021",

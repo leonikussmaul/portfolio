@@ -116,7 +116,7 @@
                     height="100%"
                 >
                     <layoutData>
-                        <FlexItemData baseSize="16%" />
+                        <FlexItemData baseSize="17%" />
                     </layoutData>
                     <f:GridContainer>
                         <f:layout>

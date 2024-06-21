@@ -7,9 +7,10 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
     "sap/ui/Device",
-    "./model/models"
+    "./model/models",
+    "sap/m/IllustrationPool",
 ],
-    function (UIComponent, Device, models) {
+    function (UIComponent, Device, models, IllustrationPool) {
         "use strict";
 
         return UIComponent.extend("myportfolio.portfolio.Component", {
@@ -28,6 +29,13 @@ sap.ui.define([
                 // call the base component's init function
 
                 UIComponent.prototype.init.apply(this, arguments);
+                let oTntSet = {
+                    setFamily: "tnt",
+                    setURI: sap.ui.require.toUrl("sap/tnt/themes/base/illustrations")
+                };
+
+                // register tnt illustration set
+                IllustrationPool.registerIllustrationSet(oTntSet, false);
 
                 // enable routing
                 this.getRouter().initialize();

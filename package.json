@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@sapui5/ts-types-esm": "^1.125.0"
+  }
+}
